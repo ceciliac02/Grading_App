@@ -7,23 +7,30 @@
 	students.forEach(function(names) {
 		console.log(names);
 	});
+	
+	let str = '<ul>';
+	students.forEach(function(names){
+		str += '<li>' + names + '</li>';
+	});
+	str += '</ul>';
+	document.getElementById("studentList").innerHTML = str;
 
 	let studentOutput = document.getElementById("studentNameHTML");
 
+	let studentName;
+
 	document.getElementById("enter").onclick = function () {
-		let studentName = document.getElementById("studentNameInput").value;
-		studentOutput.innerHTML = studentName;
+		studentName = document.getElementById("studentNameInput").value;
 	}
 
-	//let studentName = prompt("Enter a student's name:");
-
 	/*while (students.includes(studentName) == false) {
-		console.log(`There is no student by the name of ${studentName}. Try again`);
-		studentName = prompt("Enter a student's name:");
+		let noStudent = `There is no student by the name of ${studentName}. Try again`;
+		studentOutput.innerHTML = noStudent;
 	}
 	if (students.includes(studentName)) {
 		let studentID = students.indexOf(studentName);
-		console.log(`You've selected ${studentName}. What would you like to do?`);
+		let studentSelect = `You've selected ${studentName}.`;
+		studentOutput.innerHTML = studentSelect;
 	}*/
 
 	
