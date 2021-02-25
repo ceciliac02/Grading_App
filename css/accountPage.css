@@ -3,6 +3,7 @@
     padding: 0;
     height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #cdd3d6
 }
 
 header {
@@ -45,38 +46,73 @@ a:hover {
 }
 
 #container {
-    height: 81vh;
     display: flex;
+    flex-wrap: wrap;
 }
 
 #welcome {
-    flex-basis: 15%;
     background-color: #bbbfc3;
-    height: 10%;
+    height: 7vh;
+    width: 20%;
+    margin-left: 2vh;
+    margin-top: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 2vh;
-    margin-top: 2vh;
-    border: 3px rgb(10, 109, 140) solid;
+    border: 1px rgb(10, 109, 140) solid;
+    border-radius: 5px;
 }
 
 #settingsHeader {
-    flex-basis: 80%;
-    margin-left: 2vh;
-    margin-top: 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
+    width: 70%;
+    height: 7vh;
+    margin-left: 2vh;
+    margin-top: 2vh;
     background-color: #bbbfc3;
-    border: 3px rgb(10, 109, 140) solid;
+    border: 1px rgb(10, 109, 140) solid;
+    border-radius: 5px;
 }
 
 #settings {
-    flex-basis: 15%;
-    height: 20%;
-    background-color: #edf1f5;
+    height: 50vh;
+    width: 20%;
     margin-left: 2vh;
+    margin-top: 2vh;
+    background-color: #edf1f5;
     display: flex;
+    justify-content: center;
+    border: 1px rgb(10, 109, 140) solid;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 20px;
+}
+
+li {
+    padding: 2vh;
+    border-bottom: 1px rgb(10, 109, 140) solid;
+}
+
+    li:hover {
+        background-color: rgb(187, 191, 195)
+    }
+
+#mainSettings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 68vh;
+    margin-left: 2vh;
+    margin-top: 2vh;
+    background-color: #edf1f5;
+    border: 1px rgb(10, 109, 140) solid;
 }
