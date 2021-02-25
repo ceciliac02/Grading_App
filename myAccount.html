@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <script src="js/homepage.js" defer></script>
-    <link href="style.css" rel="stylesheet" />
+    <link href="css/accountPage.css" rel="stylesheet" />
     <title>My Grading App</title>
 </head>
 <body>
@@ -16,35 +16,31 @@
             <a href="home.html">Home</a>
             <a href="myAccount.html">My Account</a>
             <a href="index.html">My Students</a>
+            <a href="#">News</a>
         </nav>
     </header>
 
-    <section class="container">
-        <div id="bodyOfThePage">
-            <p id="welcome">
-
-            </p>
-            <p id="loginSection">
-                <input id="username" placeholder="Enter your username" />
-                <br />
-                <br />
-                <input type="password" id="password" placeholder="Enter your password" />
-                <br />
-                <br />
-                <button id="loginButton">Enter</button>
-                <br />
-                <br />
-                <a href="createAccount.html">Create an account</a>
-            </p>
-            
-
+    <div id="container">
+        <div id="welcome">
+            <h3>Welcome, Visitor!</h3>
         </div>
-
-        <div id="sidebar">
+        <div id="settingsHeader">
+            <h2>Settings</h2>
+        </div>
+        <div id="settings">
+            <ul>
+                <li>Personal info</li>
+                <li>Assigned Reading</li>
+                <li>Homework</li>
+                <li>Online Status</li>
+            </ul>
+        </div>
+        <div id="mainSettings">
             <p>
-                kdsadjal
+                <ul>
+                </ul>
             </p>
         </div>
-    </section>
+    </div>
 </body>
 </html>
