@@ -179,3 +179,14 @@ label {
     border-bottom: 1px rgb(10, 109, 140) solid;
     background-color: #ffffff05;
 }
+
+.update {
+    color: white;
+    background-color: rgb(10, 109, 140);
+    border: 0;
+    width: 15%;
+    margin-left: 42%;
+    margin-top: 2vh;
+    padding: 1vh;
+    font-size: 20px;
+}

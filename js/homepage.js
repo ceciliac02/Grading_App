@@ -5,6 +5,7 @@
 
 	let correctUsername = "teacher1*";
 	let correctPassword = "schoolname!";
+	let login = false;
 
 	enter.addEventListener('click', function () {
 		let inputUsername = username.value;
@@ -17,6 +18,16 @@
 		}
 		else if (inputUsername === correctUsername && inputPassword === correctPassword) {
 			errorMessage.innerHTML = "";
+			login = true;
+			console.log(login);
+		}
+		if (login === true) {
+			let loginForm = document.getElementById("loginForm");
+			let logout = document.getElementById("logout");
+			loginForm.innerHTML = "Logged in";
+			loginForm.style.textAlign = "center";
+			logout.style.display = "initial";
+			console.log("Logged in");
 		}
 	});
 }

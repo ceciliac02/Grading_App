@@ -22,7 +22,7 @@
 
     <div id="container">
         <div id="welcome">
-            <h2>Welcome, Visitor!</h2>
+            <h2 id="greeting">Welcome, Visitor!</h2>
         </div>
         <div id="settingsHeader">
             <h2>Settings</h2>
@@ -52,16 +52,32 @@
                 <input type="text" id="gender" class="forms" placeholder="Your gender here" />
                 <label for="email">Email</label>
                 <input type="email" id="email" class="forms" placeholder="youremail@site.com" />
+                <button class="update" id="personalUpdate">Update</button>
             </div>
             <div class="textbook settings">
                 <h1 class="settingChoice">Assigned Textbooks</h1>
                 <h3 class="textbookHeader">Main Textbook(s)</h3>
-                <input type="text" class="textbookForms" />
-                <input type="text" class="textbookForms" />
+                <input type="text" class="textbookForms" id="mTextbook1" />
+                <input type="text" class="textbookForms" id="mTextbook2"/>
                 <h3 class="textbookHeader">Optional Textbook(s)</h3>
-                <input type="text" class="textbookForms" />
-                <input type="text" class="textbookForms" />
-                <input type="text" class="textbookForms" />
+                <input type="text" class="textbookForms" id="oTextbook1"/>
+                <input type="text" class="textbookForms" id="oTextbook2"/>
+                <input type="text" class="textbookForms" id="oTextbook3"/>
+                <button class="update" id="textbookUpdate">Update</button>
+            </div>
+            <div class="homework settings">
+                <h1 class="settingChoice">Assigned Homework</h1>
+                <form>
+                    <h3>Assignment Type</h3>
+                    <select id="assignmentType">
+                        <option value="" selected="selected">Select assignment type</option>
+                        <option value="reading">Reading</option>
+                        <option value="exercise">Chapter Exercise</option>
+                        <option value="handout">Handout</option>
+                        <option value="project">Project</option>
+                    </select>
+                    <h3></h3>
+                </form>
             </div>
         </div>
     </div>
