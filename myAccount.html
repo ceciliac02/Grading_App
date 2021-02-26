@@ -22,12 +22,12 @@
 
     <div id="container">
         <div id="welcome">
-            <h3>Welcome, Visitor!</h3>
+            <h2>Welcome, Visitor!</h2>
         </div>
         <div id="settingsHeader">
             <h2>Settings</h2>
         </div>
-        <div id="settings">
+        <div class="settings">
             <ul>
                 <li id="personalSettings">Personal Info</li>
                 <li id="reading">Assigned Reading</li>
@@ -36,9 +36,20 @@
             </ul>
         </div>
         <div id="mainSettings">
-            <p>
-                <ul>
+            <p id="settingsContainer">
+                <h1 id="settingChoice">Personal Info</h1>
+                <ul class="nameTitleContainer">
+                    <li><input type="checkbox" class="nameTitle" />Mr.</li>
+                    <li><input type="checkbox" class="nameTitle" />Mrs.</li>
+                    <li><input type="checkbox" class="nameTitle" />Miss</li>
+                    <li><input type="checkbox" class="nameTitle" />None</li>
                 </ul>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" class="forms" />
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" class="forms"/>
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" class="forms"/>
             </p>
         </div>
     </div>

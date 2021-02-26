@@ -10,7 +10,7 @@ header h1 {
     padding: 2vh;
     font-size: 50px;
     color: white;
-    text-shadow: 4px 4px black;
+    text-shadow: 4px 4px 5px black;
     background-color: rgb(10, 109, 140);
 }
 
