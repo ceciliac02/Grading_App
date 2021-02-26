@@ -3,7 +3,24 @@
 	const readingButton = document.getElementById("reading");
 	const homeworkButton = document.getElementById("homework");
 	const statusButton = document.getElementById("status");
-	const titleButtons = document.querySelectorAll('.nameTitle');
+	const diffSettings = document.querySelectorAll('.settings')
+	const titleButtons = document.querySelectorAll(".nameTitle");
+
+	const settingsBar = [personalSettingsButton, readingButton, homeworkButton, statusButton];
+
+	for (j = 0; j < diffSettings.length; j++) {
+		diffSettings[j].style.display = "none";
+	}
+	diffSettings[0].style.display = "flex";
+
+	for (let i = 0; i < settingsBar.length; i++) {
+		settingsBar[i].addEventListener('click', function () {
+			for (j = 0; j < diffSettings.length; j++) {
+				diffSettings[j].style.display = "none";
+			}
+			diffSettings[i].style.display = "flex";
+		});
+	}
 
 	class LoginInfo {
 		firstName = "Jane";

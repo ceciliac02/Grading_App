@@ -27,32 +27,42 @@
         <div id="settingsHeader">
             <h2>Settings</h2>
         </div>
-        <div class="settings">
+        <div class="settingsBar">
             <ul>
                 <li id="personalSettings">Personal Info</li>
-                <li id="reading">Assigned Reading</li>
+                <li id="reading">Assigned Textbooks</li>
                 <li id="homework">Homework</li>
                 <li id="status">Online Status</li>
             </ul>
         </div>
         <div id="mainSettings">
-            <p id="settingsContainer">
-                <h1 id="settingChoice">Personal Info</h1>
+            <div class="personalInfo settings">
+                <h1 class="settingChoice">Personal Info</h1>
                 <ul class="nameTitleContainer">
                     <li><input type="radio" class="nameTitle" name="title" />Mr.</li>
-                    <li><input type="radio" class="nameTitle" name="title"/>Mrs.</li>
-                    <li><input type="radio" class="nameTitle" name="title"/>Miss</li>
-                    <li><input type="radio" class="nameTitle" name="title" checked/>None</li>
+                    <li><input type="radio" class="nameTitle" name="title" />Mrs.</li>
+                    <li><input type="radio" class="nameTitle" name="title" />Miss</li>
+                    <li><input type="radio" class="nameTitle" name="title" checked />None</li>
                 </ul>
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" class="forms" placeholder="Your name here" />
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" class="forms" placeholder="Your last name here"/>
+                <input type="text" id="lname" class="forms" placeholder="Your last name here" />
                 <label for="gender">Gender</label>
-                <input type="text" id="gender" class="forms" placeholder="Your gender here"/>
+                <input type="text" id="gender" class="forms" placeholder="Your gender here" />
                 <label for="email">Email</label>
                 <input type="email" id="email" class="forms" placeholder="youremail@site.com" />
-            </p>
+            </div>
+            <div class="textbook settings">
+                <h1 class="settingChoice">Assigned Textbooks</h1>
+                <h3 class="textbookHeader">Main Textbook(s)</h3>
+                <input type="text" class="textbookForms" />
+                <input type="text" class="textbookForms" />
+                <h3 class="textbookHeader">Optional Textbook(s)</h3>
+                <input type="text" class="textbookForms" />
+                <input type="text" class="textbookForms" />
+                <input type="text" class="textbookForms" />
+            </div>
         </div>
     </div>
 </body>

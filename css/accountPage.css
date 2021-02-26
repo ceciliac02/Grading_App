@@ -81,7 +81,7 @@ a:hover {
     border-radius: 5px;
 }
 
-.settings {
+.settingsBar {
     height: 50vh;
     width: 20%;
     margin-left: 2vh;
@@ -92,7 +92,7 @@ a:hover {
     border: 1px rgb(10, 109, 140) solid;
 }
 
-    .settings ul {
+    .settingsBar ul {
         list-style-type: none;
         text-align: center;
         padding: 0;
@@ -101,30 +101,33 @@ a:hover {
         font-size: 20px;
     }
 
-    .settings li {
+    .settingsBar li {
         padding: 2vh;
         border-bottom: 1px rgb(10, 109, 140) solid;
     }
 
-        .settings li:hover {
+        .settingsBar li:hover {
             background-color: rgb(187, 191, 195);
             cursor: pointer;
         }
 
 #mainSettings {
-    display: flex;
-    flex-direction: column;
     width: 70%;
     height: 68vh;
     margin-left: 2vh;
-    text-align: center;
     background-color: #edf1f5;
     box-shadow: 5px 5px 5px #0000005c;
     border: 1px rgb(10, 109, 140) solid;
 }
 
-#settingChoice {
+.settingChoice {
     color: #0a6d8c;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 label {
@@ -134,10 +137,10 @@ label {
 }
 
 .forms {
-    width: 20%;
-    margin-left: 40%;
+    width: 30%;
     margin-top: 2vh;
     margin-bottom: 2vh;
+    margin-left: 35%;
     font-size: 20px;
     text-align: center;
     border: 0;
@@ -163,4 +166,16 @@ label {
     height: 15px;
     width: 15px;
     margin-bottom: 2vh;
+}
+
+.textbookForms {
+    width: 60%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 20%;
+    font-size: 20px;
+    text-align: center;
+    border: 0;
+    border-bottom: 1px rgb(10, 109, 140) solid;
+    background-color: #ffffff05;
 }
