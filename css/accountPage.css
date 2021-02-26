@@ -129,7 +129,6 @@ a:hover {
 
 label {
     font-size: 20px;
-    margin-top: 1vh;
     text-transform: uppercase;
     color: #2e7d77;
 }
@@ -137,7 +136,8 @@ label {
 .forms {
     width: 20%;
     margin-left: 40%;
-    margin-top: 2%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     font-size: 20px;
     text-align: center;
     border: 0;
@@ -157,4 +157,10 @@ label {
     font-size: 20px;
     display: flex;
     justify-content: center;
+}
+
+.nameTitle {
+    height: 15px;
+    width: 15px;
+    margin-bottom: 2vh;
 }
