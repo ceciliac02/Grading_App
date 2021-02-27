@@ -2,6 +2,9 @@
 	const username = document.getElementById("username");
 	const password = document.getElementById("password");
 	const enter = document.getElementById("loginEnter");
+	let logout = document.getElementById("logout");
+	let loginForm = document.getElementById("loginForm");
+	const logoutForm = document.getElementById("logoutForm");
 
 	let correctUsername = "teacher1*";
 	let correctPassword = "schoolname!";
@@ -10,6 +13,20 @@
 	enter.addEventListener('click', function () { 
 		displayErrorMessage(verifyLogin(username.value, password.value)),
 		loggedInStatus(verifyLogin(username.value, password.value))
+	});
+
+	logout.addEventListener('click', function () {
+		if (login === true) {
+			logoutForm.innerHTML = "Logged out";
+			login = false;
+			setTimeout(function () { 
+				logoutForm.style.display = "none"; 
+				loginForm.style.display = "initial";
+				username.value = "";
+				password.value = "";
+				console.log("done") }, 2000);
+			return login;
+		}
 	});
 
 	function verifyLogin (usernameInput, passwordInput) {
@@ -40,12 +57,10 @@
 
 	function loggedInStatus (verification) {
 		if(verification === true) {
-		let loginForm = document.getElementById("loginForm");
-		let logout = document.getElementById("logout");
-		loginForm.innerHTML = "Logged in";
-		loginForm.style.textAlign = "center";
-		logout.style.display = "initial";
-		console.log("Logged in");
+			logoutForm.style.display = "initial";
+			loginForm.style.display = "none";
+			login = true;
+			return login;
 		}
 	}
 }
