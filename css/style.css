@@ -57,10 +57,22 @@ a:hover {
     color: white;
 }
 
+.news h3 {
+    color: rgb(59, 156, 148);
+    text-transform: uppercase;
+}
+
+.news {
+    width: 60vh;
+}
+
+.login {
+    width: 30vh;
+}
+
 .sidebar {
     background-color: rgba(0, 0, 0, .5);
     padding: 2vh;
-    width: 30vh;
     height: 80%;
     font-size: 25px;
     text-align: center;
@@ -86,6 +98,7 @@ label {
     border: none;
     background-color: rgb(59, 156, 148);
     color: white;
+    margin-top: 1vh;
     padding: 1vh;
     cursor: pointer;
     outline: none;
@@ -98,3 +111,13 @@ label {
 #logout {
     display: none;
 }
+
+li {
+    padding: 2vh;
+    list-style: square;
+    border-bottom: 1px #3b9c94 solid;
+}
+
+    li a {
+        text-decoration: none;
+    }
