@@ -115,9 +115,15 @@ label {
 li {
     padding: 2vh;
     list-style: square;
-    border-bottom: 1px #3b9c94 solid;
+    background-color: #3b9c94;
+    border: 1px #0a6d8c solid;
+    list-style: none;
 }
 
     li a {
         text-decoration: none;
+    }
+
+    li:hover {
+        background-color: #0a6d8c;
     }
