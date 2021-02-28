@@ -1,4 +1,8 @@
 {
+	import {login} from './homepage.js';
+	
+	console.log(login);
+	
 	const personalSettingsButton = document.getElementById("personalSettings");
 	const readingButton = document.getElementById("reading");
 	const homeworkButton = document.getElementById("homework");
