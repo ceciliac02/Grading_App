@@ -63,5 +63,4 @@
 			return login;
 		}
 	}
-	export {login}
 }
