@@ -65,17 +65,14 @@ table {
 }
 
 th {
-    background-color: #f7b17e;
+    background-color: #095584;
+    color: white;
     font-size: 30px;
 }
 
 td {
     font-size: 25px;
 }
-
-    td:hover {
-        background-color: #fbf5f0;
-    }
 
 .studentName {
     background-color: #2287a7;
@@ -85,16 +82,18 @@ td {
     word-spacing: 5px;
 }
 
-    .studentName:hover,
-    .studentName:focus {
-        background-color: #3b9c94;
-        cursor: pointer;
-    }
-
 .id {
     width: 15vh;
 }
 
 .highlighted, .selected {
-    background-color: #e8ceba;
+    color: black;
+}
+
+.highlighted {
+    background-color: #b4d3e2;
+}
+
+.selected {
+    background-color: #fd9245;
 }
