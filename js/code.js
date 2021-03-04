@@ -78,16 +78,30 @@
 
 	let cellsInEaRow = Math.round(spreadsheetCells.length / spreadsheetRows.length);
 	for (let i = 1; i < spreadsheetRows.length; i++) {
-		for (let j = 1; j <= cellsInEaRow; j++){
 			studentSpreadsheet.rows[i].addEventListener('mouseover', function () {
 				studentSpreadsheet.rows[i].cells[0].classList.add("nameHighlighted");
-				studentSpreadsheet.rows[i].cells[j].classList.add("highlighted");
+				for (let j = 1; j <= cellsInEaRow; j++) {
+					studentSpreadsheet.rows[i].cells[j].classList.add("highlighted");
+				}
 			});
+
 			studentSpreadsheet.rows[i].addEventListener('mouseleave', function () {
 				studentSpreadsheet.rows[i].cells[0].classList.remove("nameHighlighted");
-				studentSpreadsheet.rows[i].cells[j].classList.remove("highlighted");
-			})
-		}
+				for (let j = 1; j <= cellsInEaRow; j++) {
+					studentSpreadsheet.rows[i].cells[j].classList.remove("highlighted");
+				}
+			});
+			studentSpreadsheet.rows[i].addEventListener('click', function () {
+				let highlightedNodes = document.querySelectorAll(".selected");
+				for (let k = 0; k < highlightedNodes.length; k++) {
+					highlightedNodes[k].classList.remove("selected");
+					console.log(highlightedNodes[k]);
+				}
+				for (let j = 1; j <= cellsInEaRow; j++) {
+					studentSpreadsheet.rows[i].cells[j].classList.toggle("selected");
+				}
+			});
+		
 	}
 	
 	(function appendStudentNames () {
@@ -96,6 +110,14 @@
 			studentSpreadsheet.rows[i].cells[1].innerHTML = students[i - 1].id;
 		}
 	})();
+
+	function testIfHighlighted () {
+		if (document.querySelectorAll(".highlighted").length > 0) {
+			document.querySelectorAll(".highlighted").classList.remove(".highlighted");
+		}
+	}
+
+	
 
 	function appendIDNumbers () {
 
