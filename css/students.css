@@ -53,14 +53,11 @@ a:hover {
 }
 
 table, th, td {
-    border: 2px black solid;
     border-collapse: collapse;
-    text-align: center;
-    background-color: #f1f1e7;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     border: 1px #0a6d8c solid;
-    outline: none;
+    background-color: #eaddd3;
 }
 
 table {
@@ -68,13 +65,17 @@ table {
 }
 
 th {
-    background-color: #ceb29e;
+    background-color: #f7b17e;
     font-size: 30px;
 }
 
 td {
     font-size: 25px;
 }
+
+    td:hover {
+        background-color: #fbf5f0;
+    }
 
 .studentName {
     background-color: #2287a7;
@@ -85,12 +86,15 @@ td {
 }
 
     .studentName:hover,
-    .studentName:focus,
-    .selected {
+    .studentName:focus {
         background-color: #3b9c94;
         cursor: pointer;
     }
 
 .id {
     width: 15vh;
+}
+
+.highlighted, .selected {
+    background-color: #e8ceba;
 }
