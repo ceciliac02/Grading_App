@@ -3,7 +3,7 @@
 	let spreadsheetRows = document.getElementsByTagName("TR");
 	let spreadsheetCells = document.getElementsByTagName("TD");
 
-	let studentNames = ["Thorp, Mike", "Lavinsky, Molly", "Kaiser, Alan", "Brown, Patricia", "Bowers, Vivian", "Morales, Caden", "Pierce, Ryan", "Veracruz, Leticia", "Fox, Darius", "Tran, Jordan", "Juarez, Emilio", "Stone, Rebecca", "Fuentes, Marycruz"];
+	let studentNames = ["Thorp, Mike", "Lavinsky, Molly", "Kaiser, Alan", "Brown, Patricia", "Bowers, Vivian", "Morales, Caden", "Pierce, Ryan", "Veracruz, Leticia", "Fox, Darius", "Tran, Jordan", "Juarez, Emilio", "Stone, Rebecca", "Fuentes, Marycruz", "Sanders, Greg", "Huyhn, Edward", "Kapoor, Anika"];
 
 	studentNames = studentNames.sort();
 
@@ -12,28 +12,12 @@
 			this.name = name;
 			this.id = id;
 		}
-		totalGrade = undefined;
-		homework = undefined;
-		test = undefined;
+		totalGrade = "";
+		homework = "";
+		test = "";
 	}
 
 	console.log(createIdNumber().join("").toString());
-	
-
-	/*let student1 = new Student(studentNames[0], "960222");
-	student1.homework = "100%";
-	student1.test = "100%";
-	student1.totalGrade = calculateTotalGrade(student1.homework, student1.test);
-	let student2 = new Student(studentNames[1], "871034");
-	student2.homework = "45%";
-	student2.test = "34%";
-	student2.totalGrade = calculateTotalGrade(student2.homework, student2.test);
-	let student3 = new Student(studentNames[2], "835468");
-
-	let student4 = new Student(studentNames[3], "196649");
-	let student5 = new Student(studentNames[4])
-	let students = [student1, student2, student3, student4];
-	console.log(student1, student2, student3, student4);*/
 
 	//Creates a random ID number for the students
 	function createIdNumber () {
@@ -64,8 +48,6 @@
 	students[10].id = "131267";
 	students[11].id = "399410";
 	students[12].id = "082297";
-
-	console.log(students);
 
 	//Appends rows and cells to the table dependant on the number of students
 	(function addRowsAndCells () {
@@ -107,13 +89,6 @@
 		}
 	})();
 
-	function calculateTotalGrade (homework, test) {
-		let total = (parseInt(homework) + parseInt(test)) / 2;
-		console.log(parseInt(homework), parseInt(test));
-		total += "%";
-		return total;
-	}
-
 	//Adds student information to the table
 	(function appendStudentInfo () {
 		for (let i = 1; i <= students.length; i++) {
@@ -149,14 +124,37 @@
 		});
 		//Sets highlight on selected row and removes from all highlight from all other rows
 		studentSpreadsheet.rows[i].addEventListener('click', function () {
-			let highlightedNodes = document.querySelectorAll(".selected");
-			for (let k = 0; k < highlightedNodes.length; k++) {
-				highlightedNodes[k].classList.toggle("selected");
-			}
-			for (let j = 0; j < cellsInEaRow; j++) {
-				studentSpreadsheet.rows[i].cells[j].classList.add("selected");
-			}
+			addSelectedClass(i),
+			calculateTotalGrade(getGrade1(i), getGrade2(i), i)
 		});	
+	}
+
+	function addSelectedClass (i) {
+		let highlightedNodes = document.querySelectorAll(".selected");
+		for (let k = 0; k < highlightedNodes.length; k++) {
+			highlightedNodes[k].classList.toggle("selected");
+		}
+		for (let j = 0; j < cellsInEaRow; j++) {
+			studentSpreadsheet.rows[i].cells[j].classList.add("selected");
+		}
+		console.log("row " + i + " selected");
+	}
+
+	function getGrade1 (i) {
+		let homeworkGrades = studentSpreadsheet.rows[i].cells[3].innerHTML;
+		return homeworkGrades;
+	}
+
+	function getGrade2 (i) {
+		let testGrades = studentSpreadsheet.rows[i].cells[4].innerHTML;
+		return testGrades;
+	}
+
+	function calculateTotalGrade (homework, test, row) {
+		let total = (parseInt(homework) + parseInt(test)) / 2;
+		console.log(parseInt(homework), parseInt(test));
+		total += "%";
+		studentSpreadsheet.rows[row].cells[2].innerHTML = total;
 	}
 	
 }
