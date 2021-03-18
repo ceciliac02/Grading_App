@@ -6,15 +6,18 @@
 	let loginForm = document.getElementById("loginForm");
 	const logoutForm = document.getElementById("logoutForm");
 
+	//Sets login information and status as logged out
 	let correctUsername = "teacher1*";
 	let correctPassword = "schoolname!";
 	let login = false;
 
+	//Displays error message or logged in status after submitting
 	enter.addEventListener('click', function () { 
 		displayErrorMessage(verifyLogin(username.value, password.value)),
 		loggedInStatus(verifyLogin(username.value, password.value))
 	});
 
+	//Sets css to display when logged out
 	logout.addEventListener('click', function () {
 		if (login === true) {
 			logoutForm.innerHTML = "Logged out";
@@ -29,6 +32,7 @@
 		}
 	});
 
+	//Checks and verifies the login credentials
 	function verifyLogin (usernameInput, passwordInput) {
 		this.usernameInput = usernameInput;
 		this.passwordInput = passwordInput;
@@ -45,6 +49,7 @@
 		return verification;
 	}
 
+	//Displays an error message if incorrect credentials are entered
 	function displayErrorMessage (verification) {
 		let errorMessage = document.getElementById("errorMessage");
 		if (verification === false) {
@@ -55,6 +60,7 @@
 		}
 	}
 
+	//Displays logged in status using css
 	function loggedInStatus (verification) {
 		if(verification === true) {
 			logoutForm.style.display = "initial";

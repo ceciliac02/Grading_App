@@ -3,7 +3,7 @@
 	let spreadsheetRows = document.getElementsByTagName("TR");
 	let spreadsheetCells = document.getElementsByTagName("TD");
 
-	let studentNames = ["Thorp, Mike", "Lavinsky, Molly", "Kaiser, Alan", "Brown, Patricia", "Bowers, Vivian", "Morales, Caden", "Pierce, Ryan", "Veracruz, Leticia", "Fox, Darius", "Tran, Jordan", "Juarez, Emilio", "Stone, Rebecca", "Fuentes, Marycruz", "Sanders, Greg", "Huyhn, Edward", "Kapoor, Anika"];
+	let studentNames = ["Thorp, Mike", "Lavinsky, Molly", "Kaiser, Alan", "Bowers, Vivian", "Morales, Caden", "Pierce, Ryan", "Fox, Darius", "Tran, Jordan", "Juarez, Emilio", "Fuentes, Marycruz", "Sanders, Greg", "Huyhn, Edward", "Kapoor, Anika"];
 
 	studentNames = studentNames.sort();
 
@@ -12,12 +12,10 @@
 			this.name = name;
 			this.id = id;
 		}
-		totalGrade = "";
-		homework = "";
-		test = "";
+		totalGrade = "100%";
+		homework = "100/100";
+		test = "100/100";
 	}
-
-	console.log(createIdNumber().join("").toString());
 
 	//Creates a random ID number for the students
 	function createIdNumber () {
@@ -27,6 +25,8 @@
 		}
 		return studentID;
 	}
+
+	//Creates a new instance of the class Student using the array of names
 	let students = [];
 	(function createStudent () {
 		for (let i = 0; i < studentNames.length; i++) {
@@ -35,6 +35,7 @@
 		}
 	})();
 
+	//Sets individual ids created by the createIdNumber function
 	students[0].id = "960222";
 	students[1].id = "871034";
 	students[2].id = "835468";
@@ -62,7 +63,7 @@
 		}
 	})();
 
-	//Adds classes to the appended cells
+	//Adds classes and css to the appended cells
 	(function addClassLists () {
 		for (let i = 1; i <= students.length; i++) {
 			for (let j = 0; j < 5; j++) {
@@ -100,6 +101,7 @@
 		}
 	})();
 
+	//Enables the "grades" class of cells to be editable
 	let cellsInEaRow = Math.round(spreadsheetCells.length / spreadsheetRows.length);
 	(function makeEditable () {
 		for (let i = 1; i < spreadsheetRows.length; i++) {
@@ -122,13 +124,14 @@
 				studentSpreadsheet.rows[i].cells[j].classList.remove("highlighted");
 			}
 		});
-		//Sets highlight on selected row and removes from all highlight from all other rows
+		//Adds and removes highlight and calculates the overall grade
 		studentSpreadsheet.rows[i].addEventListener('click', function () {
 			addSelectedClass(i),
 			calculateTotalGrade(getGrade1(i), getGrade2(i), i)
 		});	
 	}
 
+	//Sets highlight on selected row and removes highlight from all other rows
 	function addSelectedClass (i) {
 		let highlightedNodes = document.querySelectorAll(".selected");
 		for (let k = 0; k < highlightedNodes.length; k++) {
@@ -140,19 +143,24 @@
 		console.log("row " + i + " selected");
 	}
 
+	//Returns the value on the homework cell
 	function getGrade1 (i) {
 		let homeworkGrades = studentSpreadsheet.rows[i].cells[3].innerHTML;
 		return homeworkGrades;
 	}
 
+	//Returns the value on the test cell
 	function getGrade2 (i) {
 		let testGrades = studentSpreadsheet.rows[i].cells[4].innerHTML;
 		return testGrades;
 	}
 
+	//Takes the above returned values and returns the average
 	function calculateTotalGrade (homework, test, row) {
 		let total = (parseInt(homework) + parseInt(test)) / 2;
-		console.log(parseInt(homework), parseInt(test));
+		if (Number.isNaN(total) == true) {
+			total = "0";
+		}
 		total += "%";
 		studentSpreadsheet.rows[row].cells[2].innerHTML = total;
 	}

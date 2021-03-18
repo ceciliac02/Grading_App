@@ -7,7 +7,7 @@
 	const titleButtons = document.querySelectorAll(".nameTitle");
 	const personalInfoUpdate = document.getElementById("personalUpdate");
 
-	const settingsBar = [personalSettingsButton, readingButton, homeworkButton, statusButton];
+	const settingsBar = [personalSettingsButton, readingButton, homeworkButton];
 
 	//Default settings display
 	for (j = 0; j < diffSettings.length; j++) {
@@ -25,7 +25,7 @@
 		});
 	}
 
-	function personalInfo (fname, lname, gender, title, email) {
+	function personalInfo (fname, lname) {
 		this.fname = fname;
 		this.lname = lname;
 		let greeting = document.getElementById("greeting");
