@@ -9,20 +9,21 @@
 </head>
 <body>
     <header>
+        <img src="logo.png">
         <h1>
             My Grading App
         </h1>
+    </header>
+
+    <div id="welcome">
         <nav>
             <a href="index.html">Home</a>
             <a href="myAccount.html">My Account</a>
             <a href="gradesheet.html">My Students</a>
         </nav>
-    </header>
-
-    <div id="welcome">
-        <div class="login sidebar">
+        <div class="login">
             <h3>Welcome to your portal for all your teaching needs.</h3>
-            <p id="loginForm">
+            <div id="loginForm">
                 <label for="username">Username</label>
                 <br />
                 <input type="text" id="username" value="teacher1*" />
@@ -34,23 +35,24 @@
                 <button id="loginEnter" class="button">Enter</button>
                 <button id="forgotPassword" class="button">Forgot Password</button>
                 <div id="errorMessage"></div>
-            </p>
-            <p id="logoutForm">
+            </div>
+            <div id="logoutForm">
                 Logged in
                 <br />
                 <button id="logout" class="button">Logout</button>
-            </p>
+            </div>
         </div>
-        <div class="news sidebar">
-            <h3>Recent News</h3>
-            <ul>
-                <li><a href="#">Board Meeting: Highlighting Healthy Eating Choices</a></li>
-                <li><a href="#">Tips for Reaching Out To Your Students</a></li>
-                <li><a href="#">Homework Overload and How to Prevent It</a></li>
-                <li><a href="#">Signing Up For This Year's Benefits</a></li>
-                <li><a href="#">Board Meeting: Fighting Against COVID-19</a></li>
-            </ul>
-        </div>
+    </div>
+
+    <div class="news">
+        <h3>Recent News</h3>
+        <ul>
+            <li><a href="#">Board Meeting: Highlighting Healthy Eating Choices</a></li>
+            <li><a href="#">Tips for Reaching Out To Your Students</a></li>
+            <li><a href="#">Homework Overload and How to Prevent It</a></li>
+            <li><a href="#">Signing Up For This Year's Benefits</a></li>
+            <li><a href="#">Board Meeting: Fighting Against COVID-19</a></li>
+        </ul>
     </div>
 
 </body>

@@ -25,9 +25,7 @@
 			setTimeout(function () { 
 				logoutForm.style.display = "none"; 
 				loginForm.style.display = "initial";
-				username.value = "";
-				password.value = "";
-				console.log("done") }, 2000);
+				}, 2000);
 			return login;
 		}
 	});

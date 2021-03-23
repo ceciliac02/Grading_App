@@ -1,129 +1,166 @@
-﻿body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #cdd3d6
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
 }
 
-header {
-    height: 17vh;
+/*Global*/
+button {
+  background-color: #4da6c9;
+  border: none;
+  color: white;
+  padding: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  -webkit-transition: all .15s ease-in;
+  transition: all .15s ease-in;
 }
 
-    header h1 {
-        margin: 0;
-        padding: 2vh;
-        font-size: 50px;
-        color: white;
-        text-shadow: 4px 4px 5px black;
-        background-color: rgb(10, 109, 140);
-    }
-
-nav {
-    text-align: center;
-    font-size: 25px;
-    padding: 2vh;
-    background-color: rgb(59, 156, 148);
+button:hover {
+  background-color: #056d96;
 }
 
-    nav a {
-        padding: 5vh;
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-a:link {
-    color: white
+a {
+  color: #4da6c9;
+  text-decoration: none;
+  text-shadow: 0px 0px 5px black;
+  -webkit-transition: all .15s ease-in;
+  transition: all .15s ease-in;
 }
 
 a:visited {
-    color: white;
+  color: white;
 }
 
 a:hover {
-    color: black;
+  color: #4da6c9;
+}
+
+/*homepage*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #4da6c9;
+  padding: 5px;
+}
+
+header img {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+header h1 {
+  text-align: left;
+  font-size: 40px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
 #welcome {
-    background-image: url(../teacher.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center;
-    height: 83vh;
-    display: flex;
-    justify-content: space-between;
-    color: white;
+  background-image: url("/students.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 50vh;
 }
 
-.news h3 {
-    color: rgb(59, 156, 148);
-    text-transform: uppercase;
+#welcome nav {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+#welcome .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 20px;
+  padding: 20px;
+  height: 80%;
+}
+
+#welcome .login h3 {
+  color: white;
+  text-shadow: 0px 0px 5px black;
+}
+
+#welcome .login #loginForm, #welcome .login #logoutForm {
+  margin-top: 50px;
+}
+
+#welcome .login #loginForm label, #welcome .login #logoutForm label {
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  text-transform: uppercase;
+}
+
+#welcome .login #logoutForm {
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  display: none;
 }
 
 .news {
-    width: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
 }
 
-.login {
-    width: 30vh;
+.news ul {
+  margin: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
 }
 
-.sidebar {
-    background-color: rgba(0, 0, 0, .5);
-    padding: 2vh;
-    height: 80%;
-    font-size: 25px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+.news ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  height: 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #4da6c9;
 }
 
-    .sidebar h3 {
-        text-align: center;
-    }
-
-    .sidebar input {
-        font-size: 15px;
-        padding: 5px;
-    }
-
-label {
-    text-transform: uppercase;
-    color: rgb(91, 197, 189);
+.news ul li a {
+  font-size: 20px;
 }
 
-.button {
-    border: none;
-    background-color: rgb(59, 156, 148);
-    color: white;
-    margin-top: 1vh;
-    padding: 1vh;
-    cursor: pointer;
-    outline: none;
+.news ul li a:hover {
+  color: black;
 }
-
-    .button:hover {
-        background-color: rgb(10, 109, 140);
-    }
-
-#logoutForm {
-    display: none;
-}
-
-li {
-    padding: 2vh;
-    list-style: square;
-    background-color: #3b9c94;
-    border: 1px #0a6d8c solid;
-    list-style: none;
-}
-
-    li a {
-        text-decoration: none;
-    }
-
-    li:hover {
-        background-color: #0a6d8c;
-    }
+/*# sourceMappingURL=style.css.map */
