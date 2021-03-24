@@ -13,6 +13,7 @@ button {
     background-color: $mainColor;
     border: none;
     color: white;
+    font-size: 20px;
     padding: 5px;
     margin-top: 5px;
     cursor: pointer;
@@ -40,6 +41,8 @@ header {
     display: flex;
     background-color: $mainColor;
     padding: 5px;
+    position: fixed;
+    width: 100%;
     img {
         margin-left: 10px;
         cursor: pointer;
@@ -59,8 +62,8 @@ header {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    height: 50vh;
+    background-attachment: scroll;
+    height: 65vh;
     nav {
         background-color: rgba(0, 0, 0, .3);
         display: flex;
@@ -68,11 +71,15 @@ header {
         font-size: 25px;
         font-weight: bold;
         padding: 5px;
+        position: fixed;
+        margin-top: 60px;
+        width: 100%;
     }
     .login {
         display: flex;
         flex-direction: column;
-        font-size: 20px;
+        justify-content: center;
+        font-size: 23px;
         padding: 20px;
         height: 80%;
         h3 {
@@ -81,11 +88,16 @@ header {
         }
         #loginForm, #logoutForm {
             margin-top: 50px;
+            margin-left: 5%;
+            
             label {
                 font-weight: bold;
                 color: white;
                 text-shadow: $shadow;
                 text-transform: uppercase;
+            }
+            input {
+                font-size: 18px;
             }
         }
         #logoutForm {
@@ -104,7 +116,8 @@ header {
     padding: 50px;
     ul {
         margin: 30px;
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
         text-align: center;
         li {
             display: flex;
@@ -112,8 +125,10 @@ header {
             height: 150px;
             align-items: center;
             background-color: $mainColor;
+            width: 200px;
             a{
                 font-size: 20px;
+                color: white;
             }
             a:hover {
                 color: black;
@@ -121,3 +136,34 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 1319px) {
+    #newsDivs {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 880px){
+    #newsDivs {
+        grid-template-columns: auto auto;
+    }
+    .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #newsDivs {
+        grid-template-columns:  auto;
+        li {
+            width: 300px;
+        }
+    }
+}
+
+

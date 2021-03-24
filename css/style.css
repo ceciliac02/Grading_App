@@ -9,6 +9,7 @@ button {
   background-color: #4da6c9;
   border: none;
   color: white;
+  font-size: 20px;
   padding: 5px;
   margin-top: 5px;
   cursor: pointer;
@@ -43,6 +44,8 @@ header {
   display: flex;
   background-color: #4da6c9;
   padding: 5px;
+  position: fixed;
+  width: 100%;
 }
 
 header img {
@@ -68,8 +71,8 @@ header h1 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  height: 50vh;
+  background-attachment: scroll;
+  height: 65vh;
 }
 
 #welcome nav {
@@ -82,6 +85,9 @@ header h1 {
   font-size: 25px;
   font-weight: bold;
   padding: 5px;
+  position: fixed;
+  margin-top: 60px;
+  width: 100%;
 }
 
 #welcome .login {
@@ -92,7 +98,10 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 23px;
   padding: 20px;
   height: 80%;
 }
@@ -104,6 +113,7 @@ header h1 {
 
 #welcome .login #loginForm, #welcome .login #logoutForm {
   margin-top: 50px;
+  margin-left: 5%;
 }
 
 #welcome .login #loginForm label, #welcome .login #logoutForm label {
@@ -111,6 +121,10 @@ header h1 {
   color: white;
   text-shadow: 0px 0px 5px black;
   text-transform: uppercase;
+}
+
+#welcome .login #loginForm input, #welcome .login #logoutForm input {
+  font-size: 18px;
 }
 
 #welcome .login #logoutForm {
@@ -138,9 +152,10 @@ header h1 {
 
 .news ul {
   margin: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
   text-align: center;
 }
 
@@ -154,13 +169,54 @@ header h1 {
       -ms-flex-align: center;
           align-items: center;
   background-color: #4da6c9;
+  width: 200px;
 }
 
 .news ul li a {
   font-size: 20px;
+  color: white;
 }
 
 .news ul li a:hover {
   color: black;
+}
+
+@media screen and (max-width: 1319px) {
+  #newsDivs {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  #newsDivs {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .login h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #newsDivs {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  #newsDivs li {
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
