@@ -5,6 +5,8 @@
 	let logout = document.getElementById("logout");
 	let loginForm = document.getElementById("loginForm");
 	const logoutForm = document.getElementById("logoutForm");
+	const navIcon = document.querySelectorAll(".navIcon");
+	const navbar = document.getElementById("navbar");
 
 	//Sets login information and status as logged out
 	let correctUsername = "teacher1*";
@@ -29,6 +31,8 @@
 			return login;
 		}
 	});
+
+	navIcon[0].addEventListener('click', openNavbar);
 
 	//Checks and verifies the login credentials
 	function verifyLogin (usernameInput, passwordInput) {
@@ -66,5 +70,9 @@
 			login = true;
 			return login;
 		}
+	}
+
+	function openNavbar () {
+		navbar.style.visibility = "initial";
 	}
 }
