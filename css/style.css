@@ -218,25 +218,9 @@ header h1 {
   header h1 {
     font-size: 30px;
   }
-  .login h3 {
-    margin-top: 65px;
-  }
-  #newsDivs {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-  }
-  #newsDivs li {
-    width: 300px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  header h1 {
-    font-size: 25px;
-  }
   header .navIcon {
     visibility: visible;
-    margin-left: 10%;
+    margin-left: 20%;
   }
   #welcome nav {
     -webkit-box-orient: vertical;
@@ -257,6 +241,28 @@ header h1 {
   }
   #welcome nav a {
     padding: 30px;
+  }
+  .login h3 {
+    margin-top: 65px;
+  }
+  #newsDivs {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  #newsDivs li {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header h1 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header .navIcon {
+    margin-left: 10%;
   }
 }
 
