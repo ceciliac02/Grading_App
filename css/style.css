@@ -24,7 +24,7 @@ button:hover {
 a {
   color: #4da6c9;
   text-decoration: none;
-  text-shadow: 0px 0px 5px black;
+  text-shadow: 0px 0px 10px black;
   -webkit-transition: all .15s ease-in;
   transition: all .15s ease-in;
 }
@@ -51,6 +51,10 @@ header {
 header img {
   margin-left: 10px;
   cursor: pointer;
+}
+
+header .navIcon {
+  visibility: hidden;
 }
 
 header h1 {
@@ -108,7 +112,7 @@ header h1 {
 
 #welcome .login h3 {
   color: white;
-  text-shadow: 0px 0px 5px black;
+  text-shadow: 0px 0px 10px black;
 }
 
 #welcome .login #loginForm, #welcome .login #logoutForm {
@@ -119,7 +123,7 @@ header h1 {
 #welcome .login #loginForm label, #welcome .login #logoutForm label {
   font-weight: bold;
   color: white;
-  text-shadow: 0px 0px 5px black;
+  text-shadow: 0px 0px 10px black;
   text-transform: uppercase;
 }
 
@@ -129,7 +133,7 @@ header h1 {
 
 #welcome .login #logoutForm {
   color: white;
-  text-shadow: 0px 0px 5px black;
+  text-shadow: 0px 0px 10px black;
   display: none;
 }
 
@@ -211,12 +215,54 @@ header h1 {
 }
 
 @media screen and (max-width: 460px) {
+  header h1 {
+    font-size: 30px;
+  }
+  .login h3 {
+    margin-top: 65px;
+  }
   #newsDivs {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }
   #newsDivs li {
     width: 300px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header h1 {
+    font-size: 25px;
+  }
+  header .navIcon {
+    visibility: visible;
+    margin-left: 10%;
+  }
+  #welcome nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #056d96;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 35px;
+    height: 50%;
+    padding: 0;
+    visibility: hidden;
+  }
+  #welcome nav a {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header h1 {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
