@@ -73,6 +73,11 @@
 	}
 
 	function openNavbar () {
-		navbar.style.visibility = "initial";
+		if (navbar.style.visibility == "hidden"){
+			navbar.style.visibility = "initial";
+		}
+		else {
+			navbar.style.visibility = "hidden";
+		}
 	}
 }

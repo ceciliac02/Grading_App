@@ -24,7 +24,7 @@ button:hover {
 }
 
 a {
-    color: $mainColor;
+    color: white;
     text-decoration: none;
     text-shadow: $shadow;
     transition: all .15s ease-in;
@@ -168,7 +168,7 @@ header {
         visibility: visible;
         margin-left: 20%;
     }
-    #welcome nav {
+    #navbar {
         flex-direction: column;
         background-color: $secondaryColor;
         justify-content: center;
