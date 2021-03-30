@@ -88,9 +88,9 @@ header {
         h3 {
             color: white;
             text-shadow: $shadow;
+            margin-bottom: 50px;
         }
         #loginForm, #logoutForm {
-            margin-top: 50px;
             margin-left: 5%;
             
             label {
@@ -168,21 +168,23 @@ header {
         visibility: visible;
         margin-left: 20%;
     }
-    #navbar {
-        flex-direction: column;
-        background-color: $secondaryColor;
-        justify-content: center;
-        align-items: center;
-        font-size: 35px;
-        height: 50%;
-        padding: 0;
-        visibility: hidden;
-    }
-    #welcome nav a {
-        padding: 30px;
-    }
-    .login h3 {
-        margin-top: 65px;
+    #welcome {
+        nav {
+            flex-direction: column;
+            background-color: $secondaryColor;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            height: 50%;
+            padding: 0;
+            visibility: hidden;
+            a {
+                padding: 30px;
+            }
+        }
+        .login h3 {
+            margin-top: 65px;
+        }
     }
     #newsDivs {
         grid-template-columns:  auto;
@@ -208,6 +210,43 @@ header {
     header h1{
         font-size: 20px;
     }
+}
+
+@media screen and (orientation: landscape) and (max-width: 800px) and (max-height: 800px) {
+    header {
+        h1 {
+            font-size: 25px;
+        }
+        .navIcon {
+            visibility: visible;
+            margin-left: 55%;
+        }
+    }
+
+    #welcome {
+        height: 100vh;
+        nav {
+            flex-direction: column;
+            background-color: $secondaryColor;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 35px;
+            height: 85%;
+            padding: 0;
+            visibility: hidden;
+        }
+        .login {
+            h3 {
+                margin-top: 100px;
+                margin-bottom: 40px;
+            }
+            #loginForm, #logoutForm {
+                margin: 0;
+            }
+        }
+    }
+    
+    
 }
 
 

@@ -22,7 +22,7 @@ button:hover {
 }
 
 a {
-  color: #4da6c9;
+  color: white;
   text-decoration: none;
   text-shadow: 0px 0px 10px black;
   -webkit-transition: all .15s ease-in;
@@ -113,10 +113,10 @@ header h1 {
 #welcome .login h3 {
   color: white;
   text-shadow: 0px 0px 10px black;
+  margin-bottom: 50px;
 }
 
 #welcome .login #loginForm, #welcome .login #logoutForm {
-  margin-top: 50px;
   margin-left: 5%;
 }
 
@@ -242,7 +242,7 @@ header h1 {
   #welcome nav a {
     padding: 30px;
   }
-  .login h3 {
+  #welcome .login h3 {
     margin-top: 65px;
   }
   #newsDivs {
@@ -269,6 +269,42 @@ header h1 {
 @media screen and (max-width: 320px) {
   header h1 {
     font-size: 20px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 800px) and (max-height: 800px) {
+  header h1 {
+    font-size: 25px;
+  }
+  header .navIcon {
+    visibility: visible;
+    margin-left: 55%;
+  }
+  #welcome {
+    height: 100vh;
+  }
+  #welcome nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #056d96;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 35px;
+    height: 85%;
+    padding: 0;
+    visibility: hidden;
+  }
+  #welcome .login h3 {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+  #welcome .login #loginForm, #welcome .login #logoutForm {
+    margin: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
