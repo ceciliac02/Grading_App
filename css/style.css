@@ -272,13 +272,13 @@ header h1 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-height: 700px) {
+@media screen and (orientation: landscape) and (max-height: 900px) {
   header h1 {
     font-size: 20px;
   }
   header .navIcon {
     visibility: visible;
-    margin-left: 55%;
+    margin-left: 65%;
   }
   #welcome {
     height: 100vh;
